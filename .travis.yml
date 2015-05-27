@@ -4,5 +4,5 @@ cache:
   - bundler
 notifications:
   email:
-    - dalibor.nasevic@gmail.com
+    - jakob.boss@gmail.com
 script: bundle exec rspec spec

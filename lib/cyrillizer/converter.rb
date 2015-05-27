@@ -4,19 +4,19 @@ module Cyrillizer
   module Converter
 
     def to_cyr
-      code(self.dup, alphabet.invert)
+      code(self.dup, alphabet(:to_cyr))
     end
 
     def to_cyr!
-      code(self, alphabet.invert)
+      code(self, alphabet(:to_cyr))
     end
 
     def to_lat
-      code(self.dup, alphabet)
+      code(self.dup, alphabet(:to_lat))
     end
 
     def to_lat!
-      code(self, alphabet)
+      code(self, alphabet(:to_lat))
     end
 
     private
@@ -28,8 +28,13 @@ module Cyrillizer
       text
     end
 
-    def alphabet
-      Cyrillizer.alphabet
+    def alphabet type
+      case type
+      when :to_lat
+        Cyrillizer.alphabet_to_lat
+      when :to_cyr
+        Cyrillizer.alphabet_to_cyr
+      end
     end
   end
 end

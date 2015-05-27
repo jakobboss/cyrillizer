@@ -2,11 +2,11 @@
 require File.expand_path('../lib/cyrillizer/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.authors       = ["Dalibor Nasevic"]
-  gem.email         = ["dalibor.nasevic@gmail.com"]
+  gem.authors       = ["Dalibor Nasevic", "Jakob Cvetko"]
+  gem.email         = ["dalibor.nasevic@gmail.com", "jakob.boss@gmail.com"]
   gem.description   = %q{Character conversion from latin to cyrillic.}
   gem.summary       = %q{Character conversion from latin to cyrillic and vice versa.}
-  gem.homepage      = "http://github.com/dalibor/cyrillizer"
+  gem.homepage      = "http://github.com/jakobboss/cyrillizer"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
